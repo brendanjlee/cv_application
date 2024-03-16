@@ -1,0 +1,14 @@
+.userFormContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.userForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.userForm label {
+  display: flex;
+  flex-direction: column;
+}

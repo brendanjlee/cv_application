@@ -4,13 +4,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.userFormContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-.userForm {
-  display: flex;
-  flex-direction: column;
-}
