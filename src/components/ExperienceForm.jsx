@@ -1,45 +1,39 @@
 import { useState } from 'react';
-import '../styles/formStyle.css'
+// import '../styles/formStyle.css'
 
-function ExprienceForm() {
-  const [expInfo, setExpInfo] = useState({expName: '', expLoc: '', expStartDate: '', expEndDate: '', jobTitle: '', jobDesc: ''});
-
-  function handleChange(e) {
-    setExpInfo({...expInfo, [e.target.id]: e.target.value});
-  }
+function ExprienceForm({expInfo, handleChange}) {
 
   return (
     <div className='userFormContainer'>
-      <h3>Experience</h3>
       <form className='userForm'>
         <label>
           Company Name
-          <input value={expInfo.expName} id='expName' onChange={handleChange} />
+          <input value={expInfo.expName} id='expName' name='expName' onChange={handleChange} />
         </label>
 
         <label>
           Company Location
-          <input value={expInfo.expLoc} id='expLoc' onChange={handleChange} />
+          <input value={expInfo.expLoc} id='expLoc' name='expLoc' onChange={handleChange} />
         </label>
 
         <label>
           Start Date
-          <input type='date' value={expInfo.expStartDate} id='expStartDate' onChange={handleChange} />
+          <input type='date' value={expInfo.expStartDate} id='expStartDate' name='expStartDate' onChange={handleChange} />
         </label>
 
         <label>
           End Date
-          <input type='date' value={expInfo.expEndDate} id='ExpEndDate' onChange={handleChange} />
+          <input type='date' value={expInfo.expEndDate} id='expEndDate' name='expEndDate' onChange={handleChange} />
         </label>
 
         <label>
           Job Title
-          <input value={expInfo.jobTitle} id='jobTitle' onChange={handleChange} />
+          <input value={expInfo.jobTitle} id='jobTitle' name='jobTitle' onChange={handleChange} />
         </label>
 
         <label>
           Job Description
-          <textarea name="jobDesc" id="jobDesc" cols="30" rows="5" onChange={handleChange}></textarea>
+          <textarea value={expInfo.jobDesc} name="jobDesc" id="jobDesc" cols="30" rows="5" onChange={handleChange}></textarea>
         </label>
 
       </form>

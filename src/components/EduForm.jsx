@@ -1,16 +1,24 @@
 import { useState } from 'react';
 import '../styles/formStyle.css'
 
-function EduForm() {
-  const [eduInfo, setEduInfo] = useState({schoolName: '', schoolLoc: '', degree: '', major: '', gradDate: ''});
-  // const [formIsOpen, setFormIsOpen] = useState(true);
+function EduForm({eduInfo, handleChange}) {
+  const [formIsOpen, setFormIsOpen] = useState(true);
 
-  function handleChange(e) {
-    setEduInfo({...eduInfo, [e.target.id]: e.target.value});
+  function toggleForm() {
+    setFormIsOpen(!formIsOpen);
   }
 
+  if (!formIsOpen) {
+    return (
+      <div className='userFormContainer'>
+        <button onClick={toggleForm}>Education</button>
+      </div>
+    );
+  }
   return (
+
     <div className="userFormContainer">
+      <button onClick={toggleForm}>Education</button>
       <h3>Education Info</h3>
       <form className="userForm">
         <label>

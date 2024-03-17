@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import '../styles/formStyle.css'
 
-function InfoForm() {
-  const [personalInfo, setPersonalInfo] = useState({name: '', email: '', phone: '', city: '', github: ''});
+function InfoForm({personalInfo, handleChange}) {
   const [formIsOpen, setFormIsOpen] = useState(true);
 
   function toggleForm() {
     setFormIsOpen(!formIsOpen);
-  }
-
-  function handleChange(e) {
-    setPersonalInfo({...personalInfo, [e.target.id]: e.target.value});
   }
 
   if (!formIsOpen) {
@@ -23,6 +18,7 @@ function InfoForm() {
   return (
     <div className="userFormContainer">
       <button onClick={toggleForm}>Basic Info</button>
+      <h3>Basic Info</h3>
       <form className="userForm">
         <label>
           Name
