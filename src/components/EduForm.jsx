@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/formStyle.css'
 
 function EduForm({eduInfo, handleChange}) {
-  const [formIsOpen, setFormIsOpen] = useState(true);
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function toggleForm() {
     setFormIsOpen(!formIsOpen);
@@ -42,8 +42,13 @@ function EduForm({eduInfo, handleChange}) {
         </label>
 
         <label>
+          Start Date
+          <input type="month" id='startDate' value={eduInfo.startDate} onChange={handleChange} />
+        </label>
+
+        <label>
           Graduation Date
-          <input type="date" id='gradDate' onChange={handleChange} />
+          <input type="month" id='gradDate' value={eduInfo.gradDate} onChange={handleChange} />
         </label>
       </form>
     </div>

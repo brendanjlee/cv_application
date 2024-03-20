@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import '../styles/formStyle.css'
 
 function ExpContainer({expList, handleChange, addForm, delForm}) {
-  const [formIsOpen, setFormIsOpen] = useState(true);
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function toggleForm() {
     setFormIsOpen(!formIsOpen);

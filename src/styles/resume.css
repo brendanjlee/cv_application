@@ -1,9 +1,20 @@
 .resume {
   padding: 0;
   margin: 0;
-  border-style: dashed;
-  height: 100vh;
+  border-style: solid;
   flex-grow: 1;
+  max-width: 210mm;
+  min-width: 210mm;
+  max-height: 297mm;
+  min-height: 297mm;
+}
+
+hr {
+  width: 90%;
+}
+
+p {
+  margin: 10px;
 }
 
 .personalInfoContainer {
@@ -12,7 +23,24 @@
   align-items: center;
 }
 
-.eduInfoContainer {
+.personalContent {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.sectionHeading {
+  margin: 0;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 40px 0px 40px;
+}
+
+.resumeHoriStack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

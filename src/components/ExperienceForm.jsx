@@ -4,7 +4,7 @@ import { useState } from 'react';
 function ExprienceForm({expInfo, handleChange}) {
 
   return (
-    <div className='userFormContainer'>
+    <div>
       <form className='userForm'>
         <label>
           Company Name
@@ -18,12 +18,12 @@ function ExprienceForm({expInfo, handleChange}) {
 
         <label>
           Start Date
-          <input type='date' value={expInfo.expStartDate} id='expStartDate' name='expStartDate' onChange={handleChange} />
+          <input type='month' value={expInfo.expStartDate} id='expStartDate' name='expStartDate' onChange={handleChange} />
         </label>
 
         <label>
           End Date
-          <input type='date' value={expInfo.expEndDate} id='expEndDate' name='expEndDate' onChange={handleChange} />
+          <input type='month' value={expInfo.expEndDate} id='expEndDate' name='expEndDate' onChange={handleChange} />
         </label>
 
         <label>
@@ -35,8 +35,8 @@ function ExprienceForm({expInfo, handleChange}) {
           Job Description
           <textarea value={expInfo.jobDesc} name="jobDesc" id="jobDesc" cols="30" rows="5" onChange={handleChange}></textarea>
         </label>
-
       </form>
+      <hr />
     </div>
   )
 }

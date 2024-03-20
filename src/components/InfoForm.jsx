@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/formStyle.css'
 
 function InfoForm({personalInfo, handleChange}) {
-  const [formIsOpen, setFormIsOpen] = useState(true);
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function toggleForm() {
     setFormIsOpen(!formIsOpen);
